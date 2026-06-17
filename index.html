@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="logo">Portfolio<span>.</span></div>
+
+        <div class="menu-icon" id="menu-icon">
+            <i class="fas fa-bars"></i>
+        </div>
+
+        <ul class="nav-links" id="nav-links">
+            <li><a href="#home" class="nav-item active">Home</a></li>
+            <li><a href="#about" class="nav-item">About</a></li>
+            <li><a href="#skills" class="nav-item">Skills</a></li>
+            <li><a href="#projects" class="nav-item">Projects</a></li>
+            <li><a href="#contact" class="nav-item">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="home" class="home-section">
+        <div class="home-container">
+            <div class="home-content">
+                <h3>Hello, It's Me</h3>
+                <h1>My name is MUHIB ULLAH</h1>
+                <h2>I'm a <span class="text-animate">Video Editor & Web Developer</span></h2>
+                <p>I specialize in creating high-converting video advertisements and building ultra-fast, modern
+                    websites. My goal is to help your business stand out in the digital world.</p>
+
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://wa.me/yournumber" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                </div>
+
+                <a href="#contact" class="btn">Contact Me</a>
+            </div>
+
+            <div class="home-img">
+                <div class="img-box">
+                    <img src="WhatsApp Image 2026-06-16 at 10.36.25 PM.jpeg" alt="Profile Picture">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about-section">
+        <h2 class="heading">About <span>Me</span></h2>
+        <div class="about-container">
+            <p> I am a passionate creator with over 3
+                years of experience crafting engaging video ads for social media platforms and developing responsive
+                frontend web developer and mobile app, using HTML5,CSS3 and Jvascript.</p>
+        </div>
+    </section>
+
+    <section id="skills" class="skills-section">
+        <h2 class="heading">My <span>Skills</span></h2>
+        <div class="skills-container">
+            <div class="skill-card">
+                <i class="fas fa-video"></i>
+                <h3>Video Ads Creation</h3>
+                <p>Crafting high-quality, engaging video advertisements tailored for Facebook, Instagram, and TikTok
+                    campaigns.</p>
+            </div>
+            <div class="skill-card">
+                <i class="fab fa-html5"></i>
+                <h3>Frontend Development</h3>
+                <p>Building clean, structured, and modern websites using HTML, CSS, JavaScript, and modern design
+                    frameworks.</p>
+            </div>
+            <div class="skill-card">
+                <i class="fas fa-mobile-alt"></i>
+                <h3>Responsive Design</h3>
+                <p>Ensuring websites look flawlessly beautiful on all screen sizes, including mobile phones, tablets,
+                    and desktops.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects-section">
+        <h2 class="heading">Latest <span>Projects</span></h2>
+        <div class="projects-grid">
+            <div class="project-box">
+                <img src="image.png" alt="Project 1">
+                <div class="project-layer">
+                    <h4>E-Commerce Website</h4>
+                    <p>A fully responsive mobile and electronics store built with modern web technologies.</p>
+                    <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+            <div class="project-box">
+                <img src="c:\Users\IT CENTER\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalState\sessions\353F2B8217225417718593A4A29043CB3A0E0B5B\transfers\2026-24\WhatsApp Image 2026-06-16 at 10.29.18 PM.jpeg"
+                    alt="Project 2">
+                <div class="project-layer">
+                    <h4>Social Media Video Ad</h4>
+                    <p>A highly engaging promotional video created for a major brand advertisement campaign.</p>
+                    <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <h2 class="heading">Contact <span>Me</span></h2>
+        <form class="contact-form">
+            <div class="input-box">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Email Address" required>
+            </div>
+            <textarea cols="30" rows="10" placeholder="Your Message" required></textarea>
+            <button type="submit" class="btn">Send Message</button>
+        </form>
+    </section>
+
+    <footer class="footer">
+        <p>Copyright &copy; 2026 | All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+<script>
+    // Smart Portfolio Features
+
+    // 1. Mobile Responsive Hamburger Menu Logic
+    const menuIcon = document.getElementById('menu-icon');
+    const navLinks = document.getElementById('nav-links');
+
+    menuIcon.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+
+        // Switch between bars and times (X) icon on click
+        const icon = menuIcon.querySelector('i');
+        icon.classList.toggle('fa-bars');
+        icon.classList.toggle('fa-times');
+    });
+
+    // Auto-close menu when clicking a link on mobile screens
+    const navItems = document.querySelectorAll('.nav-item');
+    navItems.forEach(item => {
+        item.addEventListener('click', () => {
+            navLinks.classList.remove('active');
+            const icon = menuIcon.querySelector('i');
+            icon.classList.add('fa-bars');
+            icon.classList.remove('fa-times');
+        });
+    });
+
+
+    // 2. Sticky Header Effect on Scroll
+    const navbar = document.querySelector('.navbar');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 20) {
+            navbar.classList.add('sticky');
+        } else {
+            navbar.classList.remove('sticky');
+        }
+    });
+
+
+    // 3. Dynamic Menu Highlighting (Active Scrollspy Link)
+    const sections = document.querySelectorAll('section');
+
+    window.addEventListener('scroll', () => {
+        let current = '';
+
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.clientHeight;
+
+            // Checks which section is currently active on view
+            if (pageYOffset >= (sectionTop - 150)) {
+                current = section.getAttribute('id');
+            }
+        });
+
+        navItems.forEach(item => {
+            item.classList.remove('active');
+            if (item.getAttribute('href').includes(current)) {
+                item.classList.add('active');
+            }
+        });
+    });
+</script>
+
+</html>
